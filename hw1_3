@@ -1,0 +1,99 @@
+# hw 1.3
+* bash脚本
+```
+#!/bin/bash
+# 重置filenames.txt和dirnames.txt
+> filenames.txt
+> dirnames.txt
+# 将ls的结果保存到变量name_hw中
+name_hw=`ls`
+# 遍历name_hw
+for val in $name_hw
+do
+# 若val是文件，则将该文件名追加写入文件filenames.txt
+if [ -f $val ];then
+echo "f$val" >> filenames.txt
+# 若val是文件夹，则将该子文件夹名追加写入文件dirnames.txt
+elif [ -d $val ]; then
+echo "$val" >> dirnames.txt
+fi
+done
+exit 0
+```  
+* filenames.txt
+```
+a1.txt
+a.txt
+b1.txt
+bam_wig.sh
+b.filter_random.pl
+c1.txt
+chrom.size
+c.txt
+d1.txt
+dirnames.txt
+dir.txt
+e1.txt
+f1.txt
+filenames.txt
+hash.sh
+human_geneExp.txt
+hw1_3.sh
+if.sh
+image
+insitiue.txt
+mouse_geneExp.txt
+name.txt
+number.sh
+out.bw
+random.sh
+read.sh
+test3.sh
+test4.sh
+test.sh
+test.txt
+typescript
+wigToBigWig
+```  
+* dirnames.txt
+```  
+a-docker
+app
+backup
+bin
+biosoft
+c1-RBPanno
+datatable
+db
+download
+e-annotation
+exRNA
+genome
+git
+highcharts
+home
+hub29
+ibme
+l-lwl
+map2
+mljs
+module
+mogproject
+node_modules
+perl5
+postar2
+postar_app
+postar.docker
+RBP_map
+rout
+script
+script_backup
+software
+tcga
+test
+tmp
+tmp_script
+var
+x-rbp
+```
+
